@@ -1,0 +1,20 @@
+{
+    "admin_cover-presets_.json": {
+        "hash": "8cc11bea62cb588553e39ac14a0655e6"
+    },
+    "admin_cover-presets_category.json": {
+        "hash": "68537e63645f5cb53b0e3b2773633cbb"
+    },
+    "admin_covers_.json": {
+        "hash": "50fa0671cea0356993130907f77481cf"
+    },
+    "api_cover-presets_.json": {
+        "hash": "b7a6f2c128b771a995a3146df251cda2"
+    },
+    "api_covers_.json": {
+        "hash": "23e07e291a5999f05e4456fd8f33f679"
+    },
+    "public_covers_.json": {
+        "hash": "4ffaa12745eb6063cf4904c263781b62"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "public/th_covers_thread_view_status.json": {
+        "hash": "3332dff1c2db8500c7e9263c3f1be8c0"
+    },
+    "public/th_covers_xfrmrwm_status.json": {
+        "hash": "bc3a068a5c10664403a2d552e54daa61"
+    },
+    "public/thcovers_account_visitor_menu.json": {
+        "hash": "cddb7e32a0d5d7e259aac97026fc1479"
+    },
+    "public/thcovers_member_macros_buttonxfrm_resource_wrapper.json": {
+        "hash": "95bd028df0914159cfd680eb205cbfbf"
+    },
+    "public/thcovers_page_container.json": {
+        "hash": "f0e45edb276cda0ec0cb03454145aa02"
+    },
+    "public/thcovers_thread_view_button.json": {
+        "hash": "72a940249da304fe624efa39810ed01c"
+    },
+    "public/thcovers_thread_view_cover.json": {
+        "hash": "e235b4c5e7e5d016511b9afa0f9a9267"
+    },
+    "public/thcovers_xfrm_resource_wrapper_macros_cover.json": {
+        "hash": "51c52ec3ca431898656ce2d4c4160b1a"
+    }
+}

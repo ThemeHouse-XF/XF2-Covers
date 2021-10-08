@@ -1,0 +1,34 @@
+{
+  "name": "themehouse_xenforo_covers",
+  "version": "1.0.0",
+  "description": "Themehouse Covers JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack/config",
+    "dev": "NODE_ENV=development ./node_modules/.bin/webpack --config webpack/config --watch"
+  },
+  "author": "ThemeHouse",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "compression-webpack-plugin": "^1.0.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
+    "flow-bin": "^0.52.0",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint-plugin-import": "^2.7.0",
+    "jquery": "^3.2.1"
+  }
+}

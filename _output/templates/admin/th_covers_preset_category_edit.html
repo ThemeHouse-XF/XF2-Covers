@@ -1,0 +1,23 @@
+<xf:if is="$category.isInsert()">
+	<xf:title>{{ phrase('thcovers_add_cover_preset_category') }}</xf:title>
+	<xf:else />
+	<xf:title>{{ phrase('thcovers_edit_cover_preset_category') }}: {$category.title}</xf:title>
+</xf:if>
+
+<xf:pageaction if="$category.isUpdate()">
+	<xf:button href="{{ link('cover-presets/category/delete', $category) }}" icon="delete" overlay="true" />
+</xf:pageaction>
+
+<xf:form action="{{ link('cover-presets/category/save', $category) }}" ajax="true" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:textboxrow label="{{ phrase('title') }}" name="title" value="{{ $category.isUpdate() ? $category.title : '' }}" />
+
+			<hr class="formRowSep" />
+
+			<xf:textboxrow label="{{ phrase('display_order') }}" name="display_order"
+						   value="{$category.display_order}" min="0" step="1" type="number" />
+		</div>
+		<xf:submitrow icon="save" />
+	</div>
+</xf:form>

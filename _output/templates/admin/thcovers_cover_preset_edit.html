@@ -1,0 +1,123 @@
+<xf:if is="$coverPreset.isInsert()">
+	<xf:title>{{ phrase('thcovers_add_cover_preset') }}</xf:title>
+	<xf:else />
+	<xf:title>{{ phrase('thcovers_edit_cover_preset') }}: {$coverPreset.title}</xf:title>
+</xf:if>
+
+<xf:pageaction if="$coverPreset.isUpdate()">
+	<xf:button href="{{ link('cover-presets/delete', $coverPreset) }}" icon="delete" overlay="true" />
+</xf:pageaction>
+
+<xf:form action="{{ link('cover-presets/save', $coverPreset) }}" ajax="true" class="block-container">
+	<h2 class="block-tabHeader tabs hScroller" data-xf-init="tabs h-scroller" data-state="replace" role="tablist">
+		<span class="hScroller-scroll">
+			<a class="tabs-tab is-active"
+			   role="tab"
+			   tabindex="0"
+			   id="cover-preset-general"
+			   data-controls="cover-preset-general">
+				{{ phrase('thcovers_general') }}
+			</a>
+			<a class="tabs-tab"
+			   role="tab"
+			   tabindex="0"
+			   id="cover-preset-styling"
+			   data-controls="cover-preset-styling">
+				{{ phrase('thcovers_styling') }}
+			</a>
+			<xf:macro template="helper_criteria" name="user_tabs" />
+		</span>
+	</h2>
+
+	<ul class="tabPanes">
+		<li class="is-active" role="tabpanel" id="cover-preset-general">
+			<div class="block-body">
+				<xf:textboxrow label="{{ phrase('title') }}" name="title" value="{{ $coverPreset.isUpdate() ? $coverPreset.title : '' }}" />
+
+				<hr class="formRowSep" />
+
+				<xf:if is="$categories is not empty">
+					<xf:selectrow name="cover_preset_category_id"
+								  label="{{ phrase('th_covers_category') }}"
+								  value="{$coverPreset.cover_preset_category_id}">
+						<xf:option value="0">{{ phrase('(none)') }}</xf:option>
+						<xf:foreach loop="$categories" value="$category">
+							<xf:option value="{$category.cover_preset_category_id}">{$category.title}</xf:option>
+						</xf:foreach>
+					</xf:selectrow>
+
+					<xf:else />
+					<xf:hiddenval name="cover_preset_category_id" value="0" />
+				</xf:if>
+
+				<xf:textboxrow label="{{ phrase('display_order') }}" name="display_order"
+							   value="{$coverPreset.display_order}" min="0" step="1" type="number" />
+
+				<hr class="formRowSep" />
+
+				<xf:checkboxrow>
+					<xf:option name="enabled" label="{{ phrase('enabled') }}"
+							   selected="$coverPreset.enabled"
+							   hint="{{ phrase('thcovers_enabled_hint') }}" />
+				</xf:checkboxrow>
+
+				<xf:checkboxrow label="{{ phrase('default') }}" explain="{{ phrase('thcovers_cover_default_explain' )}}">
+					<xf:foreach loop="$handlers" key="$type" value="$handler">
+						<xf:option name="defaults[]"
+								   value="{$type}"
+								   selected="{{ in_array($type, $coverPreset.default_for) }}">
+							{$handler.object.getContentTypePhrase()}
+						</xf:option>
+					</xf:foreach>
+				</xf:checkboxrow>
+			</div>
+		</li>
+
+		<li role="tabpanel" id="cover-preset-styling">
+			<xf:if is="$coverPreset.cover_image.url">
+				<xf:js src="themehouse/covers/admin.js" addon="ThemeHouse/Covers" min="1" />
+				<div class="js-banner" data-xf-init="thcovers-preset-positioner" style="{$coverPreset.css|raw}">
+					<xf:hiddenval name="cover_image[banner_position_y]" class="js-bannerPosY">{$coverPreset.cover_image.banner_position_y}</xf:hiddenval>
+				</div>
+			</xf:if>
+
+			<div class="js-imageContainer">
+				<xf:textboxrow label="{{ phrase('thcovers_cover_image_url') }}"
+							   name="cover_image[url]"
+							   value="{$coverPreset.cover_image.url}" />
+
+				<hr class="formRowSep" />
+			</div>
+
+			<div class="js-styleContainer">
+				<xf:macro template="public:color_picker_macros"
+						  name="color_picker"
+						  arg-label="{{ phrase('thcovers_background_color') }}"
+						  arg-name="cover_styling[background_color]"
+						  arg-value="{$coverPreset.cover_styling.background_color}" />
+			</div>
+		</li>
+
+		<xf:macro template="helper_criteria" name="user_panes"
+				  arg-criteria="{{ $userCriteria.getCriteriaForTemplate() }}"
+				  arg-data="{{ $userCriteria.getExtraTemplateData() }}" />
+
+		<xf:submitrow class="js-submitButton" sticky="true" icon="save" />
+	</ul>
+</xf:form>
+
+<xf:css>
+	.p-main-inner
+	{
+		max-width:1200px;
+	}
+	.block-tabHeader.tabs
+	{
+		border-bottom:0;
+	}
+	.js-banner
+	{
+		height: 193.31px;
+		background-size: cover;
+	}
+</xf:css>

@@ -1,0 +1,6 @@
+{
+    "permission_type": "flag",
+    "interface_group_id": "th_cover_resource",
+    "display_order": 50,
+    "depend_permission_id": ""
+}

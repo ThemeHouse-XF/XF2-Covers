@@ -1,0 +1,27 @@
+<xf:formrow label="{{ phrase('th_covers_author') }}">
+	<xf:username user="$content.CoverUser" rich="true" />
+</xf:formrow>
+
+<xf:formrow label="{{ phrase('th_covers_content') }}">
+	{{
+		phrase('th_covers_cover_x', {
+			'contentType': $content.content_type|to_upper('ucfirst'),
+			'contentLink': $content.getHandler().getContentUrl($content.getContent())
+		})
+	}}
+</xf:formrow>
+
+<xf:formrow label="{{ phrase('th_covers_cover_date') }}">
+	<xf:date time="$content.cover_date" />
+</xf:formrow>
+
+<xf:formrow label="{{ phrase('th_covers_cover') }}">
+	<img src="{{ thcovers_cover_url($content, 'o') }}" />
+</xf:formrow>
+
+<xf:macro template="approval_queue_macros" name="spam_log" arg-spamDetails="{$spamDetails}" />
+
+<xf:macro template="approval_queue_macros" name="action_row"
+		  arg-unapprovedItem="{$unapprovedItem}"
+		  arg-handler="{$handler}"
+		  />

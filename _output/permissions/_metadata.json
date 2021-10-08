@@ -1,0 +1,56 @@
+{
+    "th_cover-approveUnapprove.json": {
+        "hash": "74a33258494e041d01c06bab5b0301e5"
+    },
+    "th_cover-edit_all.json": {
+        "hash": "5e9cdcacedc3ef2d5bb9b1b5d68688f3"
+    },
+    "th_cover-resource_delete.json": {
+        "hash": "5e3d18a7032d1deb18f100babd3171f3"
+    },
+    "th_cover-resource_downloadImage.json": {
+        "hash": "50da4b10c019b48c9c75ef626a7e7e28"
+    },
+    "th_cover-resource_edit.json": {
+        "hash": "dd09ada4c23b35e6a49164ac6d0c7b0d"
+    },
+    "th_cover-resource_positionImage.json": {
+        "hash": "9e17fa61b8541ab9673fdfccf7f07467"
+    },
+    "th_cover-resource_preset.json": {
+        "hash": "244c1dc270ca59ead7c5219fa2831ea1"
+    },
+    "th_cover-resource_style.json": {
+        "hash": "10283f9131255f7b98f0116e39397103"
+    },
+    "th_cover-resource_uploadImage.json": {
+        "hash": "fb0f9915393ca2ed7a2245fdb6372b34"
+    },
+    "th_cover-resource_view.json": {
+        "hash": "1ad891033861a0306c2cc0617e027c56"
+    },
+    "th_cover-thread_delete.json": {
+        "hash": "ccb223754edf10bcda9ab9a2a27527e5"
+    },
+    "th_cover-thread_downloadImage.json": {
+        "hash": "f576d954cfcbc18b5b10505bff619daf"
+    },
+    "th_cover-thread_edit.json": {
+        "hash": "c517a541237a42ae2ac734f2696afcee"
+    },
+    "th_cover-thread_positionImage.json": {
+        "hash": "24d4503b90be55e1599c05a52c241122"
+    },
+    "th_cover-thread_preset.json": {
+        "hash": "d6f1109e853586776a2add41d4e5005a"
+    },
+    "th_cover-thread_style.json": {
+        "hash": "5a5223ff0feae94a9c1d061d238afc0c"
+    },
+    "th_cover-thread_uploadImage.json": {
+        "hash": "45715a74adbc9d8f9143d49312cb06d6"
+    },
+    "th_cover-thread_view.json": {
+        "hash": "b2a06a63a8027b3f7c45a3434d872d79"
+    }
+}

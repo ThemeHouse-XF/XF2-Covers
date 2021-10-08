@@ -1,0 +1,129 @@
+<xf:title>{{ phrase('thcovers_cover_browser') }}</xf:title>
+
+<xf:css src="public:th_covers.less" />
+<xf:css src="thcovers_list.less" />
+
+<xf:form action="{{ link('covers') }}" class="block">
+	<div class="block-outer">
+		<div class="filterBlock">
+			<ul class="listInline">
+				<li>
+					<xf:select name="content_type" class="filterBlock-input" value="{$linkFilters.content_type}">
+						<xf:option>{{ phrase('(all_content_types)') }}</xf:option>
+						<xf:foreach loop="$handlers" key="$contentType" value="$handler">
+							<xf:option value="{$contentType}">{$handler.getContentTypePhrase()}</xf:option>
+						</xf:foreach>
+					</xf:select>
+				</li>
+				<li>
+					<xf:textbox name="username" value="{$linkFilters.username}" ac="single"
+								class="input filterBlock-input"
+								placeholder="{{ phrase('user_name') }}" />
+				</li>
+				<li>
+					<div class="inputGroup inputGroup--auto inputGroup--inline">
+						<xf:dateinput name="start" value="{{ $linkFilters.start ? date($linkFilters.start, 'Y-m-d') : '' }}"
+									  class="filterBlock-input filterBlock-input--small" />
+						<span class="inputGroup-text">-</span>
+						<xf:dateinput name="end" value="{{ $linkFilters.end ? date($linkFilters.end, 'Y-m-d') : '' }}"
+									  class="filterBlock-input filterBlock-input--small" />
+						<span class="inputGroup-splitter"></span>
+					</div>
+				</li>
+				<li>
+					<xf:select name="date_preset" class="js-presetChange filterBlock-input">
+						<xf:option label="{{ phrase('date_presets:') }}" value="-1" />
+						<xf:optgroup>
+							<xf:options source="{$datePresets}" />
+							<xf:option value="1995-01-01">{{ phrase('all_time') }}</xf:option>
+						</xf:optgroup>
+					</xf:select>
+				</li>
+				<li>
+					<xf:button type="submit" class="button--small">{{ phrase('go') }}</xf:button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<xf:if is="$covers is not empty">
+		<div class="block-container">
+			<div class="block-body">
+				<xf:datalist>
+					<xf:foreach loop="$covers" value="$cover">
+						<xf:datarow>
+							<xf:toggle name="cover_ids[]" value="{$cover.cover_id}" />
+
+							<xf:cell
+									 class="dataList-cell--min dataList-cell--alt dataList-cell--image dataList-cell--imageMediumWide"
+									 href="{{ link('covers/view', $cover) }}">
+
+								<div class="{{ thcovers_cover_class($cover.Content) }}" style="{{ thcovers_cover_styling($cover.Content, 'm') }} ">
+
+								</div>
+							</xf:cell>
+
+							<xf:cell href="{{ link('covers/view', $cover) }}" class="dataList-cell--main">
+								<div class="dataList-mainRow">{{ $cover.Content.{$cover.getHandler().getContentTitle()} }}
+								</div>
+								<div class="dataList-subRow">
+									<ul class="listInline listInline--bullet">
+										<li><xf:date time="{$cover.cover_date}" /></li>
+										<li>{{ $cover.CoverUser.username ?: phrase('unknown_user') }}</li>
+									</ul>
+								</div>
+							</xf:cell>
+
+							<xf:cell
+									 href="{{ $cover.getHandler().getContentUrl($cover.getContent()) }}"
+									 target="'_blank'"
+									 class="dataList-cell--action">
+								{{ phrase('view_host_content') }}
+								<span class="dataList-secondRow">{$cover.getContentTypePhrase()|parens}</span>
+							</xf:cell>
+
+							<xf:delete href="{{ link('covers/delete', $cover, $linkFilters) }}" />
+						</xf:datarow>
+					</xf:foreach>
+				</xf:datalist>
+			</div>
+			<div class="block-footer block-footer--split">
+				<span class="block-footer-counter">{{ display_totals($covers, $total) }}</span>
+				<span class="block-footer-select"><xf:checkbox standalone="true"><xf:option check-all="< .block-container" label="{{ phrase('select_all') }}" /></xf:checkbox></span>
+				<span class="block-footer-controls">
+					<xf:button type="submit" name="delete_covers" overlay="true" icon="delete" />
+				</span>
+			</div>
+			<xf:else />
+			<div class="block">
+				<div class="block-container">
+					<div class="block-row">{{ phrase('no_results_found') }}</div>
+				</div>
+			</div>
+		</div>
+	</xf:if>
+	<xf:pagenav page="{$page}" perpage="{$perPage}" total="{$total}"
+				link="covers" params="{$linkFilters}"
+				wrapperclass="block-outer block-outer--after" />
+
+</xf:form>
+
+<xf:js>
+	$(function()
+	{
+	$('.js-presetChange').change(function(e)
+	{
+	var $ctrl = $(this),
+	value = $ctrl.val(),
+	$form = $ctrl.closest('form');
+
+	if (value == -1)
+	{
+	return;
+	}
+
+	$form.find($ctrl.data('start') || 'input[name=start]').val(value);
+	$form.find($ctrl.data('end') || 'input[name=end]').val('');
+	$form.submit();
+	});
+	});
+</xf:js>

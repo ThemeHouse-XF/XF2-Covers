@@ -1,0 +1,113 @@
+<xf:macro name="cover_action_buttons" arg-entity="!" arg-context="!" arg-buttonGroup="{{ false }}">
+	<xf:css src="th_covers.less" />
+	<xf:set var="$cover" value="{{ thcovers_get_cover($entity) }}"/>
+
+	<xf:set var="$buttons">
+		<xf:macro name="buttons" arg-entity="{$entity}" arg-context="{$context}" arg-cover="{$cover}" arg-buttonGroup="{$buttonGroup}" />
+	</xf:set>
+
+	<xf:if is="$buttonGroup">
+		<xf:if contentcheck="true">
+			<div class="buttonGroup u-pullLeft">
+				<xf:contentcheck>
+					{$buttons|raw}
+				</xf:contentcheck>
+			</div>
+		</xf:if>
+	<xf:else />
+		{$buttons|raw}
+	</xf:if>
+
+	<xf:js src="themehouse/global/20210125.js" min="1"/>
+	<xf:js src="themehouse/covers/index.js" addon="ThemeHouse/Covers"/>
+
+	<xf:js>
+		window.themehouse.covers.ele = new window.themehouse.covers.covers({
+		settings: {
+		url: "{{ link('covers/position', {'content_type': $entity.getEntityContentType(), 'content_id': $entity.getEntityId()}) }}"
+		},
+		width: {{ $cover.cover_image.sizes.o.0|default(0) }},
+		height: {{ $cover.cover_image.sizes.o.1|default(0) }},
+		});
+
+		window.themehouse.covers.ele.register();
+	</xf:js>
+</xf:macro>
+
+<xf:macro name="buttons" arg-entity="!" arg-context="!" arg-cover="!" arg-buttonGroup="{{ false }}">
+	<xf:if is="$cover.canEdit() && $context != 'tooltip'">
+		<xf:if contentcheck="true">
+			<!--[ThemeHouse/Covers:action_group_covers:start]-->
+			<xf:if is="$buttonGroup"><div class="buttonGroup-buttonWrapper"></xf:if>
+			<xf:button class="button--link menuTrigger"
+					   data-xf-click="menu"
+					   aria-expanded="false"
+					   aria-haspopup="true">
+				{{ phrase('thcovers_cover') }}
+			</xf:button>
+			<div class="menu" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					<h4 class="menu-header">{{ phrase('thcovers_edit_cover') }}</h4>
+					<xf:contentcheck>
+						<!--[XF:find_menu:top]-->
+						<xf:if is="{$cover.canSetImage()}">
+							<a href="{{ link('covers/image', {'content_type': $entity.getEntityContentType(), 'content_id': $entity.getEntityId()}) }}"
+							   rel="nofollow"
+							   class="blockLink"
+							   data-xf-click="overlay">
+								<xf:if is="{{ !$cover.cover_id || $cover.cover_state == 'deleted' || !$cover.cover_image }}">
+									{{ phrase('thcovers_set_cover_image') }}
+									<xf:else />
+									{{ phrase('thcovers_modify_cover_image') }}
+								</xf:if>
+							</a>
+						</xf:if>
+						<xf:if is="{$cover.canStyle()}">
+							<a href="{{ link('covers/style', {'content_type': $entity.getEntityContentType(), 'content_id': $entity.getEntityId()}) }}"
+							   rel="nofollow"
+							   class="blockLink"
+							   data-xf-click="overlay">
+								{{ phrase('thcovers_style_cover') }}
+							</a>
+						</xf:if>
+						<xf:if is="{$cover.canPositionImage()}">
+							<a href="#" rel="nofollow"
+							   class="blockLink cover__positionTrigger"
+							   data-xf-click="cover-position">
+								{{ phrase('thcovers_position_cover') }}
+							</a>
+						</xf:if>
+						<xf:if is="$cover.canUsePreset() AND $xf.app.registry.get('coverPresets')">
+							<a href="{{ link('covers/preset', {'content_type': $entity.getEntityContentType(), 'content_id': $entity.getEntityId()}) }}"
+							   rel="nofollow"
+							   class="blockLink"
+							   data-xf-click="overlay">
+								{{ phrase('thcovers_choose_preset') }}</a>
+						</xf:if>
+						<xf:if is="{$cover.canDelete()}">
+							<a href="{{ link('covers/delete', {'content_type': $entity.getEntityContentType(), 'content_id': $entity.getEntityId()}) }}"
+							   rel="nofollow"
+							   class="blockLink"
+							   data-xf-click="overlay">
+								{{ phrase('thcovers_delete_cover') }}
+							</a>
+						</xf:if>
+						<xf:if is="{$cover.canApproveUnapprove()}">
+							<a href="{{ link('covers/approve', {'content_type': $entity.getEntityContentType(), 'content_id': $entity.getEntityId()}) }}"
+							   rel="nofollow"
+							   class="blockLink"
+							   data-xf-click="overlay">
+								{{ $cover.cover_state == 'moderated' ? phrase('thcovers_approve_cover') : phrase('thcovers_unapprove_cover') }}
+							</a>
+						</xf:if>
+						<!--[XF:find_menu:bottom]-->
+					</xf:contentcheck>
+				</div>
+			</div>
+			<xf:if is="$buttonGroup"></div></xf:if>
+			<xf:button class="button--link cover__action cover__save">{{ phrase('thcovers_save_position') }}</xf:button>
+			<xf:button class="button--link cover__action cover__cancel">{{ phrase('cancel') }}</xf:button>
+			<!--[ThemeHouse/Covers:action_group_covers:end]-->
+		</xf:if>
+	</xf:if>
+</xf:macro>

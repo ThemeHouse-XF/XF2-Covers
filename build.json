@@ -1,0 +1,10 @@
+{
+    "additional_files": [
+        "js/themehouse/covers/index.js",
+        "js/themehouse/global/20210125.js",
+        "js/themehouse/global/20210125.min.js"
+    ],
+    "minify": [
+        "js/themehouse/covers/index.js"
+    ]
+}

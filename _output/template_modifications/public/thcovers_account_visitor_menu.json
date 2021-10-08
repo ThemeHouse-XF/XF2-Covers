@@ -1,0 +1,9 @@
+{
+    "template": "account_visitor_menu",
+    "description": "Adds the profile cover to the user's visitor menu.",
+    "execution_order": 5,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/(<div.*)\"(.*menu-row--(?:alt|highlighted))\"(>)/Us",
+    "replace": "${1}\"${2} {{ $xf.options.th_covers_userCoverOn.visitorMenu ? thcovers_cover_class($xf.visitor) : '' }}\" style=\"{{ $xf.options.th_covers_userCoverOn.visitorMenu ? thcovers_cover_styling($xf.visitor, 'm') : '' }}\" ${3}\n\t\t<xf:css src=\"th_covers.less\" />"
+}

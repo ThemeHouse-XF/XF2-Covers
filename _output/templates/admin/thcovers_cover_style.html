@@ -1,0 +1,21 @@
+<xf:title>{{ phrase('thcovers_style_cover_image') }}</xf:title>
+
+<xf:form action="{{ link('covers/style', $cover) }}"
+		 ajax="true"
+		 class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:macro template="public:color_picker_macros"
+					  name="color_picker"
+					  arg-label="{{ phrase('thcovers_background_color') }}"
+					  arg-name="background_color"
+					  arg-value="{$cover.cover_styling.background_color}" />
+		</div>
+	</div>
+
+	<xf:submitrow submit="{{ phrase('okay') }}">
+		<xf:html>
+			<xf:button type="submit" name="delete" value="1" icon="delete" />
+		</xf:html>
+	</xf:submitrow>
+</xf:form>

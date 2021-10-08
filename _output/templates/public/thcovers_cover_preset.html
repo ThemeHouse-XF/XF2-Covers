@@ -1,0 +1,63 @@
+<xf:title>{{ phrase('thcovers_preset_cover_image') }}</xf:title>
+
+<xf:css src="th_covers.less" />
+
+<div class="block blocks--close">
+	<div class="block-container">
+
+		<xf:if contentcheck="true">
+			<div class="block-body block-row">
+				<h2 class="block-textHeader">
+					{{ phrase('th_covers_uncategorized')}}
+				</h2>
+				<div class="thcovers_presetRow">
+					<xf:contentcheck>
+						<xf:foreach loop="$presets.0" value="$preset">
+							<xf:macro name="preset" arg-preset="{$preset}"
+									  arg-contentType="{$contentType}" arg-contentId="{$contentId}" />
+						</xf:foreach>
+					</xf:contentcheck>
+				</div>
+			</div>
+		</xf:if>
+
+		<xf:foreach loop="$categories" value="$category" key="$categoryId">
+			<xf:if contentcheck="true">
+				<div class="block-body block-row">
+					<h2 class="block-textHeader">
+						{$category.title}
+					</h2>
+					<div class="thcovers_presetRow">
+						<xf:contentcheck>
+							<xf:foreach loop="{$presets.{$categoryId}}" value="$preset">
+								<xf:macro name="preset" arg-preset="{$preset}"
+										  arg-contentType="{$contentType}" arg-contentId="{$contentId}"/>
+							</xf:foreach>
+						</xf:contentcheck>
+					</div>
+				</div>
+			</xf:if>
+		</xf:foreach>
+	</div>
+</div>
+
+<xf:macro name="preset"
+		  arg-contentType="!"
+		  arg-contentId="!"
+		  arg-preset="!">
+	<div class="thcovers_preset">
+		<div class="block-body">
+			<a href="{{ link('covers/preset', {'content_type': $contentType, 'content_id': $contentId}, {
+					 'cover_preset_id': $preset.cover_preset_id,
+					 '_xfRedirect': $redirect,
+					 't': csrf_token()
+					 }) }}"
+			   style="{{ thcovers_cover_preset($preset) }}"
+			   class="cover-preset-linkRow cover cover-preset-preview">
+				<h2 class="block-minorHeader">
+					{$preset.title}
+				</h2>
+			</a>
+		</div>
+	</div>
+</xf:macro>

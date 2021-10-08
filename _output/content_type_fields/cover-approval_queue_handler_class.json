@@ -1,0 +1,5 @@
+{
+    "content_type": "cover",
+    "field_name": "approval_queue_handler_class",
+    "field_value": "ThemeHouse\\Covers\\ApprovalQueue\\Cover"
+}

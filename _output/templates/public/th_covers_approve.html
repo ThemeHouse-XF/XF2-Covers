@@ -1,0 +1,17 @@
+<xf:title>{{ $cover.cover_state == 'moderated' ? phrase('th_covers_approve') : phrase('th_covers_unapprove') }}</xf:title>
+
+<xf:form action="{{ link('covers/approve', $cover) }}" class="block" ajax="true">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				<xf:if is="$cover.cover_state == 'moderated'">
+					{{ phrase('please_confirm_that_you_want_to_approve_the_following:') }}
+					<xf:else />
+					{{ phrase('th_covers_please_confirm_that_you_want_to_unapprove_the_following:') }}
+				</xf:if>
+				<strong><a href="{{ $cover.getHandler().getContentUrl($cover.Content) }}">{{$cover.Content.{$cover.getHandler().getContentTitle()}}}</a></strong>
+			</xf:inforow>
+		</div>
+		<xf:submitrow icon="save" rowtype="simple" />
+	</div>
+</xf:form>

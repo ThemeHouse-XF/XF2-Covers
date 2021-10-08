@@ -1,0 +1,9 @@
+{
+    "template": "PAGE_CONTAINER",
+    "description": "Add cover to titlebar.",
+    "execution_order": 20,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/(<div class=\"p-body-header)(.*style=\"|)(.*\">)/",
+    "replace": "<xf:css src=\"th_covers.less\" />\n${1} {{ $thCover ? thcovers_cover_class($thCover) : '' }}\"\nstyle=\"{{ $thCover ? thcovers_cover_styling($thCover, 'l') : '' }} ${3}\n<xf:include template=\"thcovers_positionMessage\" />"
+}

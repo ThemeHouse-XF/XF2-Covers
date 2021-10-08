@@ -1,0 +1,16 @@
+<xf:macro name="og_image"
+		  arg-cover="{{ null }}">
+	<xf:if is="$cover && $xf.options.thcovers_ogImages">
+		<xf:set var="$coverImageLink" value="{{ thcovers_cover_url($cover, 'o', true) }}" />
+
+		<xf:if is="$coverImageLink">
+			<xf:set var="$metaImageValue">
+				<xf:macro template="metadata_macros" name="image_url"
+						  arg-imageUrl="{$coverImageLink}"
+						  arg-output="{{ true }}" />
+			</xf:set>
+			<xf:page option="head.meta_image_url"
+					 value="{{$metaImageValue|raw}}" />
+		</xf:if>
+	</xf:if>
+</xf:macro>

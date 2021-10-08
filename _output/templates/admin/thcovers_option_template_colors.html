@@ -1,0 +1,38 @@
+<xf:css src="public:color_picker.less" />
+<xf:js src="xf/color_picker.js" min="1" />
+
+<xf:formrow rowtype="input"
+	label="{$option.title}"
+	hint="{$editHtml}"
+	explain="{$explainHtml}"
+	html="{$listedHtml}">
+
+	<ul class="listPlain inputGroup-container">
+		<xf:foreach loop="$colors" key="$counter" value="$color">
+			<li class="inputGroup">
+				<xf:textbox name="{$inputName}[{$counter}][title]" value="{$color.title}" placeholder="{{ phrase('title') }}" size="10" />
+				<span class="inputGroup-splitter"></span>
+				<div class="inputGroup inputGroup--joined inputGroup--color"
+					data-xf-init="color-picker"
+					data-allow-palette="{{ $valueOptions.hidePalette ? 'false' : 'true'}}"
+					data-map-name="@xf-{$property.property_name}">
+
+					<xf:textbox name="{$inputName}[{$counter}][value]" value="{$color.value}" placeholder="{{ phrase('color') }}" size="10" />
+					<div class="inputGroup-text"><span class="colorPickerBox js-colorPickerTrigger"></span></div>
+				</div>
+			</li>
+		</xf:foreach>
+
+		<li class="inputGroup" data-xf-init="field-adder" data-increment-format="{$inputName}[{counter}]">
+			<xf:textbox name="{$inputName}[{$nextCounter}][title]" placeholder="{{ phrase('title') }}" size="10" />
+			<span class="inputGroup-splitter"></span>
+			<div class="inputGroup inputGroup--joined inputGroup--color"
+				 data-xf-init="color-picker"
+				 data-allow-palette="true">
+
+				<xf:textbox name="{$inputName}[{$nextCounter}][value]" placeholder="{{ phrase('color') }}" size="10" />
+				<div class="inputGroup-text"><span class="colorPickerBox js-colorPickerTrigger"></span></div>
+			</div>
+		</li>
+	</ul>
+</xf:formrow>

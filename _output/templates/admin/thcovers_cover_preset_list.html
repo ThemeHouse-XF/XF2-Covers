@@ -1,0 +1,92 @@
+<xf:title>{{ phrase('thcovers_cover_presets') }}</xf:title>
+
+<xf:pageaction>
+	<div class="buttonGroup">
+		<xf:button href="{{ link('cover-presets/category/add') }}" data-xf-click="overlay" icon="add">{{ phrase('thcovers_add_category') }}</xf:button>
+		<xf:button href="{{ link('cover-presets/add') }}" icon="add">{{ phrase('thcovers_add_preset') }}</xf:button>
+		<xf:button href="{{ link('cover-presets/sort') }}" icon="sort" overlay="true">{{ phrase('sort') }}</xf:button>
+	</div>
+</xf:pageaction>
+
+<xf:css src="public:th_covers.less" />
+
+<xf:if is="$coverPresets is not empty or $categories is not empty">
+	<xf:form action="{{ link('cover-presets/toggle') }}"
+			 ajax="true" class="block"
+			 >
+		<div class="block-outer">
+			<xf:macro template="filter_macros" name="quick_filter" arg-key="cover-presets" arg-class="block-outer-opposite" />
+		</div>
+
+		<div class="block-container">
+			<div class="block-body">
+				<xf:datalist>
+					<xf:if is="$coverPresets.0 is not empty">
+						<xf:if is="$categories is not empty">
+							<xf:datarow rowtype="subsection" rowclass="dataList-row--noHover">
+								<xf:cell colspan="4">{{ phrase('th_covers_uncategorized') }}</xf:cell>
+							</xf:datarow>
+						</xf:if>
+						<xf:foreach loop="{$coverPresets.0}" value="$coverPreset">
+							<xf:macro name="preset" arg-preset="{$coverPreset}" />
+						</xf:foreach>
+					</xf:if>
+					<xf:foreach loop="$categories" value="$category" key="$categoryId">
+						<xf:datarow rowtype="subsection">
+							<xf:cell href="{{ link('cover-presets/category/edit', $category) }}"
+									 colspan="3" overlay="true">
+								{{ $category.title }}
+							</xf:cell>
+							<xf:delete href="{{ link('cover-presets/category/delete', $category) }}" />
+						</xf:datarow>
+						<xf:if is="{$coverPresets.{$category.cover_preset_category_id}} is not empty">
+							<xf:foreach loop="{$coverPresets.{$category.cover_preset_category_id}}" value="$coverPreset">
+								<xf:macro name="preset" arg-preset="{$coverPreset}" />
+							</xf:foreach>
+							<xf:else />
+						<xf:datarow>
+							<xf:cell colspan="5" overlay="true">
+								{{ phrase('th_covers_no_presets_in_this_category_yet') }}
+							</xf:cell>
+						</xf:datarow>
+						</xf:if>
+					</xf:foreach>
+				</xf:datalist>
+			</div>
+		</div>
+	</xf:form>
+	<xf:else />
+	<div class="block">
+		<div class="block-container">
+			<div class="block-row">{{ phrase('thcovers_no_cover_presets_have_been_added_yet') }}</div>
+		</div>
+	</div>
+</xf:if>
+
+<xf:macro name="preset"
+		  arg-preset="!">
+	<tbody class="dataList-rowGroup">
+		<xf:datarow>
+			<xf:cell class="dataList-cell--min dataList-cell--alt dataList-cell--image dataList-cell--imageSmallWide">
+				<div class="avatar" style="background: url('{$preset.cover_image.url}') {$preset.cover_styling.background_color}">
+				</div>
+			</xf:cell>
+			<xf:cell href="{{ link('cover-presets/edit', $preset) }}">
+				{$preset.title}
+				<div class="dataList-subRow">
+					<ul class="listInline listInline--bullet">
+						<xf:foreach loop="$preset.default_names" value="$default">
+							<li>{$default}</li>
+						</xf:foreach>
+					</ul>
+				</div>
+			</xf:cell>
+			<xf:toggle name="enabled[{$preset.cover_preset_id}]"
+					   selected="$preset.enabled"
+					   class="dataList-cell--separated"
+					   submit="true" />
+
+			<xf:delete href="{{ link('cover-presets/delete', $preset) }}" />
+		</xf:datarow>
+	</tbody>
+</xf:macro>

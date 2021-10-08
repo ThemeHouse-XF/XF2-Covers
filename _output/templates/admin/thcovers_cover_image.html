@@ -1,0 +1,39 @@
+<xf:title>{{ phrase('thcovers_modify_cover_image', {'content_type': $contentType }) }}</xf:title>
+
+<xf:css src="th_covers.less" />
+
+<xf:form action="{{ link('covers/image', $cover) }}"
+		 ajax="true" upload="true" class="block" data-xf-init="cover-upload">
+	<div class="block-container">
+		<ul class="block-body">
+			<li class="block-row block-row--separated coverControl">
+				<div class="coverControl-inputs">
+					<xf:radio name="cover_image_type">
+						<xf:option label="{{ phrase('thcovers_upload_cover') }}" value="custom">
+							<xf:dependent>
+								<xf:upload name="upload" class="js-uploadCoverImage" accept=".gif,.jpeg,.jpg,.jpe,.png" />
+								<dfn class="inputChoices-explain">
+									{{ phrase('thcovers_it_is_recommended_that_you_use_image_that_is_at_least_1000x600_pixels') }}
+								</dfn>
+							</xf:dependent>
+						</xf:option>
+					</xf:radio>
+				</div>
+			</li>
+
+			<li class="block-row block-row--separated coverControl">
+				<div class="coverControl-inputs">
+					<xf:radio name="cover_image_type">
+						<xf:option label="{{ phrase('thcovers_download_cover_from_url') }}" value="custom">
+							<xf:dependent>
+									<xf:textbox name="cover_image_url" class="js-downloadCoverImage" />
+							</xf:dependent>
+						</xf:option>
+					</xf:radio>
+				</div>
+			</li>
+		</ul>
+
+		<xf:submitrow submit="{{ phrase('okay') }}" rowtype="simple" class="js-overlayClose" />
+	</div>
+</xf:form>

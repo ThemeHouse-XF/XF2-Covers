@@ -1,0 +1,22 @@
+<xf:title>{{ phrase('thcovers_preset_cover_image') }}</xf:title>
+
+<div class="block">
+	<div class="block-container">
+		<a href="{{ link('covers/preset', $cover, {
+				 'cover_preset_id': 0, '_xfRedirect': $redirect, 't': csrf_token()
+				 }) }}" class="menu-linkRow menu-linkRow--alt">{{ phrase('none') }}</a>
+		<div class="block-body">
+			<ul class="listPlain listColumns">
+				<xf:foreach loop="$presets" value="$preset">
+					<li>
+						<a href="{{ link('covers/preset', $cover, {
+								 'cover_preset_id': $preset.cover_preset_id,
+								 '_xfRedirect': $redirect,
+								 't': csrf_token()
+								 }) }}" class="menu-linkRow">{$preset.title}</a>
+					</li>
+				</xf:foreach>
+			</ul>
+		</div>
+	</div>
+</div>

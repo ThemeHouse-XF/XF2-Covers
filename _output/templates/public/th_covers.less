@@ -1,0 +1,248 @@
+/* Basic implementation */
+
+.memberTooltip-header {display: flex;}
+
+.cover {
+	&+ .block {
+		margin-top: 10px;
+	}
+
+	&.cover-preset-linkRow {
+		display: block;
+		.xf-menuLinkRow(no-background);
+		padding: 100px @xf-paddingMedium @xf-paddingMedium;
+		vertical-align: bottom;
+		color: #fff;
+
+		&.is-selected,
+		&:hover,
+		&:focus
+		{
+			&:before {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+			
+			.xf-menuLinkRowSelected(no-background);
+			color: #fff;
+			border-left-color: fade(@xf-borderColorFeature, 50%);
+
+			&:focus
+			{
+				outline: 0;
+			}
+
+			&.is-selected
+			{
+				border-left-color: @xf-borderColorFeature;
+			}
+		}
+	}
+
+	&.noUserBanner .memberHeader-banners,
+	&.noLastSeen  .pairs.memberHeader-blurb,
+	&.noTitle  .memberHeader-blurb:not(.pairs) {
+		display: none;
+	}
+}
+
+/* Cover Styling */
+
+.p-body-header.cover,
+.menu-row--highlighted.cover,
+.cover.menu-row.menu-row--alt,
+.cover
+{
+	background-size: cover !important;
+	background-position: 50% 50%;
+	position: relative;
+	color: rgba(255,255,255,.8);
+
+	.thTopicHeading__container__topics .thTopic--additional {color: #fff;}
+
+	.memberHeader-blurb a, .memberTooltip-blurb a {color: inherit;}
+
+	&.memberTooltip-header {
+		display: flex;
+
+		.memberTooltip-avatar {padding-right: 10px;}
+
+		.memberTooltip-headerInfo {
+			flex-grow: 1;
+		}
+	}
+
+	.username {color: #fff;}
+
+	.contentRow-minor {color: inherit;}
+
+	.pairs > dt {color: inherit;}
+
+	&.cover-thread, &.cover-resource, &.cover-user.memberHeader-main {padding-top: 130px;}
+
+	.button {
+		background: #fff;
+		color: @xf-paletteAccent2;
+
+		&:hover, &:active, &:focus {
+			color: #fff;
+			background: @xf-paletteAccent2;		
+		}
+	}
+
+	.u-muted {color: inherit;}
+
+	> * {position: relative;}
+
+	.memberHeader-avatar {z-index: 1;}
+
+	.memberHeader-content {
+		// text-shadow: 0 0 1px rgba(0,0,0,.6);
+	}
+
+	.memberHeader-name, .contentRow-header, .memberTooltip-name {color: #fff;}
+
+	// .pairs > dt, a:not(.tagItem), a:hover:not(.tagItem), .contentRow-minor {color: inherit;}
+
+	.avatar {
+		border: 2px solid @xf-contentBg;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		background-color: rgba(0,0,0,.4);
+
+		.memberHeader-main&,
+		.p-body-header& {
+			background: linear-gradient(to bottom, rgba(0,0,0,.1) 0%, rgba(0,0,0,.2) 50%, rgba(0, 0, 0, 0.7));
+		}
+	}
+
+	// &.cover-thread:before, &.cover-resource:before {display: none;}
+}
+
+/* titlebar */
+
+.p-body-header.cover {
+	padding-bottom: @xf-paddingLarge;
+	padding-left: @xf-paddingLarge;
+	padding-right: @xf-paddingLarge;
+	border-radius: @xf-borderRadiusSmall;
+
+	.p-title-value {color: #fff;}
+
+	.p-description {color: inherit;}
+}
+
+/* Member View */
+
+.cover-update
+{
+	width: 100%;
+	height: 30px;
+	top: -30px;
+	position: absolute;
+
+	.m-hiddenLinks();
+	.m-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), #000);
+	.m-transition(@xf-animationSpeed);
+
+	padding: @xf-paddingSmall;
+	overflow: hidden;
+
+	font-size: @xf-fontSizeSmaller;
+
+	display: none;
+	align-items: flex-end;
+	justify-content: center;
+
+	.avatar--updateLink &
+	{
+		display: flex;
+	}
+
+	.has-touchevents &,
+	.avatar:hover &
+	{
+		bottom: 0;
+	}
+
+	a
+	{
+		text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+		color: #fff;
+
+		&:hover
+		{
+			text-decoration: none;
+		}
+	}
+}
+
+.cover.cover--positioning {
+	cursor: move;
+}
+
+.cover.cover--positioning > * {
+	pointer-events: none;
+	user-select: none;
+}
+
+.cover.cover--positioning .buttonGroup-buttonWrapper {
+	pointer-events: all;
+}
+
+html.cover--positioning {
+	user-select: none;
+
+	.cover__action {
+		display: inline-block !important;
+	}
+
+	& .th_covers__positionMessage {
+		display: block;
+	}
+}
+
+.cover__action {
+	display: none !important;
+}
+
+.th_covers__positionMessage {
+	display: none;
+}
+
+.th_covers__positionMessage__overlay {
+	position: absolute !important;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.th_covers__positionMessage {
+		padding: 10px 20px;
+		background-color: fade(@xf-contentBg, 80%);
+		color: @xf-textColor;
+	}
+}
+
+// preset overlay
+
+.thcovers_presetRow {
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+	grid-gap: @xf-paddingMedium;
+	margin-top: @xf-paddingMedium;
+	
+	.thcovers_preset {
+		.block-minorHeader {color: inherit;}
+	}
+}

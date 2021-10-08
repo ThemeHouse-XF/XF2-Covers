@@ -1,0 +1,1 @@
+If enabled, cover images will be embedded as Open Graph meta information for display on social media.

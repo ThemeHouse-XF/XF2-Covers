@@ -1,0 +1,758 @@
+{
+    "admin_navigation.coverlist.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "a3558bb9bea63ac21079d4e15bdacf2d"
+    },
+    "admin_navigation.coverpreset.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "856990ecbbd2719850274757d34af134"
+    },
+    "admin_navigation.covers.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "38334f0bede45378da162f03a96d2e51"
+    },
+    "admin_navigation.thcovers_options.txt": {
+        "global_cache": false,
+        "version_id": 1000091,
+        "version_string": "1.0.0 Patch Level 1",
+        "hash": "dae8ace18bdcbcc6ae5aece263e14fe8"
+    },
+    "admin_permission.thCovers.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "cec86d68d0c1dc8b8ed65d37509affb2"
+    },
+    "api_scope.cover_delete.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "abd64c69d7f4f4813a0bd8dfc96deeb9"
+    },
+    "api_scope.cover_preset_read.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "27a13723e02ef44e083cacf373738cdf"
+    },
+    "api_scope.cover_read.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "907cc2110fb7bf6a02fe16e97fc61883"
+    },
+    "api_scope.cover_write.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "4ef4f265e1a39e7f547859ff264519d9"
+    },
+    "api_scope.thcover_delete.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "38dfa5420ad37ab3135db5548afc2a09"
+    },
+    "api_scope.thcover_get.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "b6cf50eb801d8ac45656d1cbd60be450"
+    },
+    "option.thcovers_allowContentOwnersToEdit.txt": {
+        "global_cache": false,
+        "version_id": 1000135,
+        "version_string": "1.0.1 Beta 5",
+        "hash": "3d4d51918e6ebf6d0df5ac1f440fe2a9"
+    },
+    "option.thcovers_coverMaxFileSize.txt": {
+        "global_cache": false,
+        "version_id": 1000134,
+        "version_string": "1.0.1 Beta 4",
+        "hash": "a625fbc966c9c4905cd7ce749f27e6e0"
+    },
+    "option.thcovers_ogImages.txt": {
+        "global_cache": false,
+        "version_id": 1000292,
+        "version_string": "1.0.2 Patch Level 2",
+        "hash": "bfe587366de67e4083fd3f5c409575f7"
+    },
+    "option_explain.thcovers_allowContentOwnersToEdit.txt": {
+        "global_cache": false,
+        "version_id": 1000135,
+        "version_string": "1.0.1 Beta 5",
+        "hash": "572eab8cd6788d9edc4c054cfc3d4af0"
+    },
+    "option_explain.thcovers_coverMaxFileSize.txt": {
+        "global_cache": false,
+        "version_id": 1000134,
+        "version_string": "1.0.1 Beta 4",
+        "hash": "e2e6433c58a43f7b85f27ff57af9d885"
+    },
+    "option_explain.thcovers_ogImages.txt": {
+        "global_cache": false,
+        "version_id": 1000292,
+        "version_string": "1.0.2 Patch Level 2",
+        "hash": "734c10ec7f4894a1688b495c9134549d"
+    },
+    "option_group.thCovers.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "38334f0bede45378da162f03a96d2e51"
+    },
+    "option_group_description.thCovers.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "c08f0eaea25af27b4af3b427752611eb"
+    },
+    "permission.th_cover_approveUnapprove.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "f6de66caf1eeafb1daf2345d733a7d6a"
+    },
+    "permission.th_cover_edit_all.txt": {
+        "global_cache": false,
+        "version_id": 1000091,
+        "version_string": "1.0.0 Patch Level 1",
+        "hash": "662a2b13a3840b0b0c87a4582705f657"
+    },
+    "permission.th_cover_resource_delete.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "6068c82c0f4009296c15b037463ac499"
+    },
+    "permission.th_cover_resource_downloadImage.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "5e7b1206b3c34e9bd8c970e48c1ecef1"
+    },
+    "permission.th_cover_resource_edit.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "4fc15a4c9e6b51b554e44d3df9532dc0"
+    },
+    "permission.th_cover_resource_positionImage.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "9a571d6934e0ad34de17c61696ebb928"
+    },
+    "permission.th_cover_resource_preset.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "ee8c3bb53179dcea1b8f21855443e20d"
+    },
+    "permission.th_cover_resource_style.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "e2af1adcbabdf3d1111eb357cb3da91a"
+    },
+    "permission.th_cover_resource_uploadImage.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "38b2911408f72e874e597ffbb55ea79a"
+    },
+    "permission.th_cover_resource_view.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "dfe8a11e4e67b353fb756dcd7d83dd4b"
+    },
+    "permission.th_cover_thread_delete.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "6a3cdada8f7c4480dfe8322a45b2241b"
+    },
+    "permission.th_cover_thread_downloadImage.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "c7d6061a06dab531fd73dddbb4fdfbc3"
+    },
+    "permission.th_cover_thread_edit.txt": {
+        "global_cache": false,
+        "version_id": 1000270,
+        "version_string": "1.0.2",
+        "hash": "3f2013f416dacae1586139e6dfd38232"
+    },
+    "permission.th_cover_thread_positionImage.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "f089dc8166f957466fd0793055c9f01e"
+    },
+    "permission.th_cover_thread_preset.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "e8d187529aa7ad2c9b123249e7c56887"
+    },
+    "permission.th_cover_thread_style.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "3f983e55c6cb17347807828880a77606"
+    },
+    "permission.th_cover_thread_uploadImage.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "a36f9721fbab1615a0cfd03b598bb694"
+    },
+    "permission.th_cover_thread_view.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "9427cf78c17b11817409b337e33c3d00"
+    },
+    "permission_interface.th_cover_moderator.txt": {
+        "global_cache": false,
+        "version_id": 1000091,
+        "version_string": "1.0.0 Patch Level 1",
+        "hash": "7173ba70573f998ec582d03611fb9672"
+    },
+    "permission_interface.th_cover_resource.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "e289c815398db0cbad854b9e2304bad5"
+    },
+    "permission_interface.th_cover_thread.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "631b227319e01a0aacf1b4f07d371708"
+    },
+    "th_covers_approve.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "6f7351657f795bc1357a53142b1184cc"
+    },
+    "th_covers_author.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "a517747c3d12f99244ae598910d979c5"
+    },
+    "th_covers_category.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "3adbdb3ac060038aa0e6e6c138ef9873"
+    },
+    "th_covers_content.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "f15c1cae7882448b3fb0404682e17e61"
+    },
+    "th_covers_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "c795dfff10a7c952f4c5438951e9ece9"
+    },
+    "th_covers_cover_date.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "315b710966125bc05811fc0449fb57d2"
+    },
+    "th_covers_cover_x.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "9b466f51e56ae037b33d11d4640b23ca"
+    },
+    "th_covers_no_presets_in_this_category_yet.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "dcb43b77a775a1ffbbb160735a8c74f7"
+    },
+    "th_covers_please_confirm_that_you_want_to_unapprove_the_following.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "02a31f04aa1f8ca3d6b6a9eb61be09fd"
+    },
+    "th_covers_this_cover_is_currently_awaiting_approval_and_not_visible_to_public.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "3ea7348e73305e516bf5625eae430abb"
+    },
+    "th_covers_unapprove.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "43de3f6941bd3a2d61a7fd6b78870435"
+    },
+    "th_covers_uncategorized.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "0d015d96f63a8c12d96b8399482b593f"
+    },
+    "th_notifier_invalid_bot_token.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "d7177a52e4aa5890c1da50d4bbddb14b"
+    },
+    "th_notifier_no_bot_token_specified.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "a2ac4cd822843edb9455cc7cc10cf6e0"
+    },
+    "thcovers_add_category.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "3abd4b07c50c7ca7d319a77235f57c0d"
+    },
+    "thcovers_add_cover_preset.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "837b7f816cef7b7d78a82a5e9c866651"
+    },
+    "thcovers_add_cover_preset_category.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "b71ca55de3783868628ae4813c3338c5"
+    },
+    "thcovers_add_preset.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "af0b8394bdf0da3106e8388f7fab604c"
+    },
+    "thcovers_approve_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "1baab17e34f609be17eb1c54bca2d8f1"
+    },
+    "thcovers_background_color.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "368d9ac76af05f714092bc808a426bfc"
+    },
+    "thcovers_choose_preset.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "9936192d764699b9e0e6cced169551f0"
+    },
+    "thcovers_content_type_x_name_y.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "9039866e03665aba009c9e6a1c906422"
+    },
+    "thcovers_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "c795dfff10a7c952f4c5438951e9ece9"
+    },
+    "thcovers_cover_author.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "db11bc7a8cf740538611d924358e383e"
+    },
+    "thcovers_cover_browser.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "f5d0869d6cc54c07038ad73f0dd9c107"
+    },
+    "thcovers_cover_date.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "315b710966125bc05811fc0449fb57d2"
+    },
+    "thcovers_cover_default_explain.txt": {
+        "global_cache": false,
+        "version_id": 1000012,
+        "version_string": "1.0.0 Alpha 2",
+        "hash": "91137df9b24eb0766a48b2e4f5815939"
+    },
+    "thcovers_cover_image_url.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "1d71bf66e0253cd04146f1262fc96856"
+    },
+    "thcovers_cover_position_successful.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "3b8cb7ad67c1215b534c633b7fcafb49"
+    },
+    "thcovers_cover_presets.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "856990ecbbd2719850274757d34af134"
+    },
+    "thcovers_cover_submitted_at_x.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "542976af29d9c06e69f2af0200f42eb3"
+    },
+    "thcovers_covers.txt": {
+        "global_cache": false,
+        "version_id": 1000292,
+        "version_string": "1.0.2 Patch Level 2",
+        "hash": "3c74d67fe6539aa42a867a2f7bc6dffc"
+    },
+    "thcovers_delete_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000033,
+        "version_string": "1.0.0 Beta 3",
+        "hash": "d67105ac08050d42dc8c036a9a49e48c"
+    },
+    "thcovers_download_cover_from_url.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "2fde7e7e5bbafa5d23706dd218fd0e94"
+    },
+    "thcovers_drag_to_reposition_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000131,
+        "version_string": "1.0.1 Beta 1",
+        "hash": "c9b8aad0be749b48fc93a53a5b975da8"
+    },
+    "thcovers_edit_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000033,
+        "version_string": "1.0.0 Beta 3",
+        "hash": "a36a1ceeddc10a9d2746bf9eefbb9150"
+    },
+    "thcovers_edit_cover_preset.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "6b0003c0618a113be88a2ae12aea65d6"
+    },
+    "thcovers_edit_cover_preset_category.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "37d21eb56a8fd5e2f6844ba4099ce120"
+    },
+    "thcovers_edit_cover_x.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "bfb92e05905efbee6ef44dbd914e4587"
+    },
+    "thcovers_enabled_hint.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "27d4b7e1c7f0fafd3b9c0b1bb96c09d0"
+    },
+    "thcovers_general.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "0db377921f4ce762c62526131097968f"
+    },
+    "thcovers_invalid_color.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "1ef55da6079408a1beb8414fba5e9b42"
+    },
+    "thcovers_it_is_recommended_that_you_use_image_that_is_at_least_1000x600_pixels.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "065c399674276f2efcfc513445c98801"
+    },
+    "thcovers_last_seen.txt": {
+        "global_cache": false,
+        "version_id": 1000092,
+        "version_string": "1.0.0 Patch Level 2",
+        "hash": "55d95901560108d4e26d394794dd5e14"
+    },
+    "thcovers_member_card.txt": {
+        "global_cache": false,
+        "version_id": 1000092,
+        "version_string": "1.0.0 Patch Level 2",
+        "hash": "4b67bea072590ffc0388dfca06f7b5d7"
+    },
+    "thcovers_modify_cover_image.txt": {
+        "global_cache": false,
+        "version_id": 1000033,
+        "version_string": "1.0.0 Beta 3",
+        "hash": "b4e7375dd3e32ec57cb886d44a8363b2"
+    },
+    "thcovers_modify_image.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "24e9cf795bec33c90a01f471b5092d9f"
+    },
+    "thcovers_no_cover_presets_have_been_added_yet.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "980b30c1b309cf7e09290a35b4960095"
+    },
+    "thcovers_no_delete_permissions.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "99fd85d77dc951d91cbf0dc9c8f135c7"
+    },
+    "thcovers_no_download_image_permissions.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "053ff33a0d0e9a332996913a05a00e7f"
+    },
+    "thcovers_no_edit_permissions.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "8808f0baede3b51002db70fbcc0191d0"
+    },
+    "thcovers_no_image_specified.txt": {
+        "global_cache": false,
+        "version_id": 1000033,
+        "version_string": "1.0.0 Beta 3",
+        "hash": "f327f13759aebe53d83745e6fa1694c6"
+    },
+    "thcovers_no_permission_to_edit_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000191,
+        "version_string": "1.0.1 Patch Level 1",
+        "hash": "d62394ad8c983a67429ba415bffa8567"
+    },
+    "thcovers_no_permission_to_set_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000191,
+        "version_string": "1.0.1 Patch Level 1",
+        "hash": "f19f21969853a89d8269d6b83b4f10bc"
+    },
+    "thcovers_no_position_permissions.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "8852478e4295ee1c5a70f9b7a0568d05"
+    },
+    "thcovers_no_preset_permissions.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "63259195aa23172b7d6b4822febfc556"
+    },
+    "thcovers_no_response_from_url.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "e607703d4fbd46be4e4bd8ce468296ac"
+    },
+    "thcovers_no_style_permissions.txt": {
+        "global_cache": false,
+        "version_id": 1000191,
+        "version_string": "1.0.1 Patch Level 1",
+        "hash": "83e6c7163a4bf4abe17c1c59b6609887"
+    },
+    "thcovers_no_upload_image_permissions.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "7ab40028b53ebc909f9d0ba53d8ea80c"
+    },
+    "thcovers_no_view_permissions.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "7225aa61e05be4806ae82eab7d40e224"
+    },
+    "thcovers_only_custom_can_be_deleted.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "97487d53ec90b080ac987624b5628c49"
+    },
+    "thcovers_only_custom_can_be_positioned.txt": {
+        "global_cache": false,
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "8b0a5a1b18e7c3fe14f51db6687a3eec"
+    },
+    "thcovers_please_provide_an_image_whose_width_longer_than_height.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "c87a724e030e3e8d99a739b383c9fba3"
+    },
+    "thcovers_please_provide_larger_dimension_image.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "d41d8de8958ca4398e1be3edae4696e3"
+    },
+    "thcovers_please_provide_smaller_dimension_image.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "e4a71e9cfe4b6e0e2ca8316636057aca"
+    },
+    "thcovers_position_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "81c2f35c7fdf4a88dc3404d11c1fc263"
+    },
+    "thcovers_position_x_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000033,
+        "version_string": "1.0.0 Beta 3",
+        "hash": "81c2f35c7fdf4a88dc3404d11c1fc263"
+    },
+    "thcovers_preset.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "cdfd4357ab2cb8f241583cca76fcbb57"
+    },
+    "thcovers_preset_cover_image.txt": {
+        "global_cache": false,
+        "version_id": 1000033,
+        "version_string": "1.0.0 Beta 3",
+        "hash": "0ecd9f2ae03a9ffa32804f3ecea4e909"
+    },
+    "thcovers_provided_url_is_not_valid.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "af75b0265d5e7eec09f235fa98e54927"
+    },
+    "thcovers_save_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "c72da10f034f6cf1fbd751c75b2d8545"
+    },
+    "thcovers_save_position.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "713f0eb2374b4607471f3f89a9438daa"
+    },
+    "thcovers_set_cover_image.txt": {
+        "global_cache": false,
+        "version_id": 1000191,
+        "version_string": "1.0.1 Patch Level 1",
+        "hash": "0a94bb899f294abbfc031c27c4fd6e46"
+    },
+    "thcovers_sort_cover_presets.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "c8dc6338a333ab8ae2ce48a481c715c3"
+    },
+    "thcovers_style_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "c36b461397973579b412174cd5841c0a"
+    },
+    "thcovers_style_cover_image.txt": {
+        "global_cache": false,
+        "version_id": 1000033,
+        "version_string": "1.0.0 Beta 3",
+        "hash": "24a8002947d89b675fc522f174b8aa2f"
+    },
+    "thcovers_styling.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "be34f05f837d8dba4134095129ee3c06"
+    },
+    "thcovers_unapprove_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "1537a66368cc4a239de9b177970ffe3b"
+    },
+    "thcovers_upload_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "502e827457c577f0c38c8c3827150155"
+    },
+    "thcovers_upload_new_custom_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "19005dca414cb51ce48a976e74994d53"
+    },
+    "thcovers_use_custom_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "8b83df52d01ba025519fd3f5d9e5e08d"
+    },
+    "thcovers_use_default_preset.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "a2dbd6c8c410d12520cec7dc2e0283c0"
+    },
+    "thcovers_visitor_menu.txt": {
+        "global_cache": false,
+        "version_id": 1000092,
+        "version_string": "1.0.0 Patch Level 2",
+        "hash": "de8bfcf67ea0fe7bd3fc3cc07c21e70c"
+    },
+    "thcovers_x_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "2ec49aa48bf6dcdb99674187ab806820"
+    },
+    "thcovers_x_covers.txt": {
+        "global_cache": false,
+        "version_id": 1000131,
+        "version_string": "1.0.1 Beta 1",
+        "hash": "48f381fa534f175fef1ae911176ceb98"
+    },
+    "thcovers_xs_cover.txt": {
+        "global_cache": false,
+        "version_id": 1000092,
+        "version_string": "1.0.0 Patch Level 2",
+        "hash": "84909eafa1012b0aeb55aae508d1978f"
+    }
+}

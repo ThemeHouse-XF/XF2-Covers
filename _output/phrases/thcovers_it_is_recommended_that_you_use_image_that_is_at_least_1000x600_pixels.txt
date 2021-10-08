@@ -1,0 +1,1 @@
+It is recommended that you use an image that is at least 1000x600 pixels.

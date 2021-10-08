@@ -1,0 +1,5 @@
+<xf:if is="{{ $thCover.ThCover && $thCover.ThCover.isVisibleToVisitor() && $thCover.ThCover.canPositionImage() }}">
+<div class="th_covers__positionMessage__overlay">
+	<div class="th_covers__positionMessage">{{ phrase('thcovers_drag_to_reposition_cover') }}</div>
+</div>
+</xf:if>

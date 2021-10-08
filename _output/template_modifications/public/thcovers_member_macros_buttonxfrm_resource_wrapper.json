@@ -1,0 +1,9 @@
+{
+    "template": "xfrm_resource_wrapper_macros",
+    "description": "Cover action buttons for resource cover modifications.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/(<xf:if contentcheck=\"true\">\\s*<div class=\"buttonGroup\">\\s*<xf:contentcheck>)(\\s*<xf:if is=\"\\$resource.canUndelete\\(\\))/Ui",
+    "replace": "$1\n<xf:macro template=\"thcovers_cover_macros\"\n\t\t  name=\"cover_action_buttons\"\n\t\t  arg-entity=\"{$resource}\"\n\t\t  arg-context=\"{$context}\" />\n$2"
+}

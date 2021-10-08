@@ -1,0 +1,14 @@
+{
+    "cover-delete.json": {
+        "hash": "daa868d471e6ade5841abf4a226ca562"
+    },
+    "cover-read.json": {
+        "hash": "5ad223878cabdb9767343565630a5444"
+    },
+    "cover-write.json": {
+        "hash": "124351d6961ac0e4e929d10e2926a06d"
+    },
+    "cover_preset-read.json": {
+        "hash": "cd37cccc716bd0ab3a63cadb899bfdf6"
+    }
+}

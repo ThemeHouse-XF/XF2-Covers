@@ -1,0 +1,10 @@
+{
+    "parent_navigation_id": "content",
+    "display_order": 2000,
+    "link": "",
+    "icon": "",
+    "admin_permission_id": "thCovers",
+    "debug_only": false,
+    "development_only": false,
+    "hide_no_children": false
+}

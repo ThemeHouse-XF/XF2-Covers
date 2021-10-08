@@ -1,0 +1,9 @@
+{
+    "template": "thread_view",
+    "description": "Cover action buttons for thread cover modifications.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:extension name=\"thread_action_buttons\">",
+    "replace": "$0\n<xf:macro template=\"thcovers_cover_macros\"\n\t\t  name=\"cover_action_buttons\"\n\t\t  arg-entity=\"{$thread}\"\n\t\t  arg-context=\"{$context}\"\n\t\t  />"
+}

@@ -1,0 +1,26 @@
+{
+    "cover-approval_queue_handler_class.json": {
+        "hash": "84420f5527b3cd32de4a38ff06c355d1"
+    },
+    "cover-entity.json": {
+        "hash": "d44b10e584a562512e5deec0cc62406d"
+    },
+    "cover-moderator_log_handler_class.json": {
+        "hash": "b4d431dc2ae953efb205212e713fbdd0"
+    },
+    "cover-phrase.json": {
+        "hash": "c741f03a81aecf4be3527917f216e6cf"
+    },
+    "cover-phrase_plural.json": {
+        "hash": "e60259ee2e76f6b67bfb8f99071250a8"
+    },
+    "cover-th_image_optimizer_handler_class.json": {
+        "hash": "d6a71780e7790cdbdc8edde889b0afa3"
+    },
+    "resource-cover_handler_class.json": {
+        "hash": "73f335a60c63bae3f0cadf8cd7c630b6"
+    },
+    "thread-cover_handler_class.json": {
+        "hash": "db4dd5e9e98a284ea373fdfbd486ecbc"
+    }
+}

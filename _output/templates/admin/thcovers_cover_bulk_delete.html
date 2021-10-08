@@ -1,0 +1,18 @@
+<xf:title>{{ phrase('confirm_action') }}</xf:title>
+
+<xf:form action="{{ link('covers/mass-delete') }}" ajax="true" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:inforow rowtype="confirm">
+				{{ phrase('please_confirm_that_you_want_to_delete_following:') }}
+				<strong>{{ phrase('thcovers_x_covers', {'amount': $covers.count()}) }}</strong>
+			</xf:inforow>
+		</div>
+		
+		<xf:foreach loop="$covers" value="$cover">
+			<xf:hiddenval name="cover_ids[]" value="{$cover.cover_id}" />
+		</xf:foreach>
+		<xf:hiddenval name="confirm" value="1" />
+		<xf:submitrow rowtype="simple" icon="delete" />
+	</div>
+</xf:form>

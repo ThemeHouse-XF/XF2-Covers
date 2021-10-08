@@ -1,0 +1,10 @@
+{
+    "parent_navigation_id": "covers",
+    "display_order": 10,
+    "link": "cover-presets",
+    "icon": "",
+    "admin_permission_id": "thCovers",
+    "debug_only": false,
+    "development_only": false,
+    "hide_no_children": false
+}

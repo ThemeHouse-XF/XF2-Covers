@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\SubContainer\\Import",
+    "to_class": "ThemeHouse\\Covers\\XF\\SubContainer\\Import",
+    "execute_order": 10,
+    "active": true
+}

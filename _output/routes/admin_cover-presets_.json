@@ -1,0 +1,11 @@
+{
+    "route_type": "admin",
+    "route_prefix": "cover-presets",
+    "sub_name": "",
+    "format": ":int<cover_preset_id>/",
+    "build_class": "",
+    "build_method": "",
+    "controller": "ThemeHouse\\Covers:CoverPresets",
+    "context": "coverpreset",
+    "action_prefix": ""
+}

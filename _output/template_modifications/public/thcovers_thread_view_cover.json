@@ -1,0 +1,9 @@
+{
+    "template": "thread_view",
+    "description": "Adds the cover to the thread.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:macro name=\"thread_status\"",
+    "replace": "<xf:if is=\"$resource\">\n<xf:page option=\"thCover\" value=\"{$resource}\" />\n<xf:else />\n<xf:page option=\"thCover\" value=\"{$thread}\" />\n</xf:if>\n<xf:macro name=\"og_image\"\n\t\t  template=\"th_covers_openGraph_macros\"\n\t\t  arg-cover=\"{$thread.ThCover}\" />\n$0"
+}

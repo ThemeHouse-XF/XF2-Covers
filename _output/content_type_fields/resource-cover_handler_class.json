@@ -1,0 +1,5 @@
+{
+    "content_type": "resource",
+    "field_name": "cover_handler_class",
+    "field_value": "ThemeHouse\\Covers\\Cover\\Resource"
+}

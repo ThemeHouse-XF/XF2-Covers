@@ -1,0 +1,125 @@
+<xf:title>{{ phrase('thcovers_edit_cover_x', {'title': $cover.Content.{$cover.getHandler().getContentTitle()} }) }}</xf:title>
+
+<xf:css src="public:th_covers.less" />
+<xf:css src="thcovers_list.less" />
+
+<xf:pageaction>
+	<div class="buttonGroup">
+		<xf:button rel="nofollow"
+				   class="button"
+				   data-xf-click="overlay"
+				   icon="upload"
+				   href="{{ link('covers/image', $cover) }}">
+			{{ $cover.cover_image ? phrase('thcovers_modify_image') : phrase('thcovers_set_cover_image') }}
+		</xf:button>
+		<xf:button href="{{ link('covers/style', $cover) }}"
+				   rel="nofollow"
+				   class="button"
+				   data-xf-click="overlay">
+			{{ phrase('thcovers_style_cover') }}
+		</xf:button>
+
+		<xf:if is="$cover.cover_image">
+			<xf:button href="#"
+					   rel="nofollow"
+					   class="button cover__positionTrigger"
+					   data-xf-click="cover-position">
+				{{ phrase('thcovers_position_cover') }}
+			</xf:button>
+		</xf:if>
+
+		<xf:button href="{{ link('covers/preset', $cover) }}"
+				   rel="nofollow"
+				   class="button"
+				   data-xf-click="overlay">
+			{{ phrase('thcovers_choose_preset') }}
+		</xf:button>
+
+		<xf:button href="{{ link('covers/delete', $cover) }}"
+				   rel="nofollow"
+				   class="button"
+				   data-xf-click="overlay"
+				   icon="delete" />
+	</div>
+</xf:pageaction>
+
+<div class="cover--fullpage {{ thcovers_cover_class($cover.Content) }}" style="{{ thcovers_cover_styling($cover.Content) }} "></div>
+<div class="block">
+	<div class="block-container">
+		<div class="block-body">
+
+			<dl class="formRow">
+				<dt style="padding: 0;"></dt>
+				<dd style="padding: 0;">
+					<xf:button style="margin: 15px 0 15px 10px;" class="button cover__action cover__save is-disabled">{{ phrase('thcovers_save_position') }}</xf:button>
+					<xf:button style="margin: 15px 0;" class="button cover__action cover__cancel">{{ phrase('cancel') }}</xf:button>
+				</dd>
+			</dl>
+
+			<xf:formrow label="{{ phrase('content_type')}}">
+				<a href="{{$cover.getHandler().getContentUrl()}}">
+					{{ phrase('thcovers_content_type_x_name_y', {
+					'type': $cover.getContentTypePhrase(),
+					'name': $cover.Content.{$cover.getHandler().getContentTitle()}
+					})}}
+				</a>
+			</xf:formrow>
+			<xf:formrow label="{{ phrase('user')}}">
+				<xf:avatar user="$cover.CoverUser" size="xxs" />
+				<xf:username user="$cover.CoverUser" />
+			</xf:formrow>
+			<xf:formrow label="{{ phrase('edit_date')}}">
+				<xf:date time="{$cover.cover_date}" />
+			</xf:formrow>
+
+			<xf:if is="$cover.CoverPreset">
+
+			<hr class="formRowSep" />
+				<xf:formrow label="{{ phrase('thcovers_preset')}}">
+					<a href="{{ link('cover-presets/edit', $cover.CoverPreset)}}">
+						{$cover.CoverPreset.title}
+					</a>
+				</xf:formrow>
+			</xf:if>
+
+			<hr class="formRowSep" />
+
+			<xf:formrow label="{{ phrase('thcovers_background_color')}}">
+				<xf:css src="public:color_picker.less" />
+				<xf:js src="xf/color_picker.js" min="1" />
+
+				<xf:set var="$picker">
+					<div class="inputGroup inputGroup--joined inputGroup--color"
+						 data-xf-init="color-picker"
+						 data-allow-palette="{$allowPalette}"
+						 data-map-name="{$mapName}">
+
+						<xf:textbox value="{$cover.cover_styling.background_color}" readOnly="{{true}}" dir="ltr" />
+						<div class="inputGroup-text"><span class="colorPickerBox js-colorPickerTrigger"></span></div>
+					</div>
+				</xf:set>
+				{$picker|raw}
+
+				<xf:if is="{$includeScripts}">
+					<xf:macro name="color_picker_scripts" arg-colorData="{$colorData}" />
+				</xf:if>
+			</xf:formrow>
+		</div>
+	</div>
+</div>
+
+
+<xf:js src="themehouse/global/20210125.js" min="1"/>
+<xf:js src="themehouse/covers/index.js" addon="ThemeHouse/Covers"/>
+
+<xf:js>
+	window.themehouse.covers.ele = new window.themehouse.covers.covers({
+	settings: {
+	url: "{{ link('covers/position', $cover) }}"
+	},
+	width: {{ $cover.cover_image.sizes.o.0|default(0) }},
+	height: {{ $cover.cover_image.sizes.o.1|default(0) }},
+	});
+
+	window.themehouse.covers.ele.register();
+</xf:js>

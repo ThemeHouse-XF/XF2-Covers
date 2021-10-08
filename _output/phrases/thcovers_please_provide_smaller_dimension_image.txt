@@ -1,0 +1,1 @@
+Please provide an image whose dimensions are smaller than {width}px * {height}px.

@@ -1,0 +1,9 @@
+{
+    "template": "xfrm_resource_wrapper_macros",
+    "description": "Add cover moderator status bar.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<dt>{{ phrase('status') }}</dt>\n\t\t\t<xf:contentcheck>",
+    "replace": "$0\n<xf:if is=\"$resource.ThCover && $resource.ThCover.cover_state === 'moderated' && $resource.ThCover.isVisibleToVisitor()\">\n\t<dd class=\"blockStatus-message blockStatus-message--moderated\">\n\t\t{{ phrase('th_covers_this_cover_is_currently_awaiting_approval_and_not_visible_to_public') }}\n\t</dd>\n</xf:if>"
+}

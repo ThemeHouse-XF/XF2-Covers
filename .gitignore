@@ -1,0 +1,6 @@
+_build/
+_data/
+_releases/
+vendor/
+
+hashes.json

@@ -1,0 +1,47 @@
+<xf:title>{{ phrase('thcovers_sort_cover_presets') }}</xf:title>
+
+<xf:macro template="public:nestable_macros" name="setup" />
+
+<xf:form action="{{ link('cover-presets/sort') }}" class="block" ajax="true">
+	<div class="block-container">
+		<h4 class="block-minorHeader">{{ phrase('th_covers_uncategorized') }}</h4>
+		<div class="block-body">
+			<div class="nestable-container" data-xf-init="nestable" data-parent-id="0" data-max-depth="1" data-value-target=".js-presetData">
+				<xf:if contentcheck="true">
+					<ol class="nestable-list">
+						<xf:contentcheck>
+							<xf:foreach loop="{$coverPresets.0}" key="$presetId" value="$preset" i="$i">
+								<li class="nestable-item" data-id="{$presetId}">
+									<div class="nestable-handle nestable-handle--full" aria-label="{{ phrase('drag_handle')|for_attr }}"><xf:fa icon="fa-bars" /></div>
+									<div class="nestable-content">{$preset.title}</div>
+								</li>
+							</xf:foreach>
+						</xf:contentcheck>
+					</ol>
+				</xf:if>
+				<xf:hiddenval name="presets[]" value="" class="js-presetData" />
+			</div>
+		</div>
+		<xf:foreach loop="$categories" key="$categoryId" value="$category">
+			<h4 class="block-minorHeader">{$category.title}</h4>
+			<div class="block-body">
+				<div class="nestable-container" data-xf-init="nestable" data-parent-id="{$categoryId}" data-max-depth="1" data-value-target=".js-presetData">
+					<xf:if contentcheck="true">
+						<ol class="nestable-list">
+							<xf:contentcheck>
+								<xf:foreach loop="{$coverPresets.{$categoryId}}" key="$presetId" value="$preset" i="$i">
+									<li class="nestable-item" data-id="{$presetId}">
+										<div class="nestable-handle nestable-handle--full" aria-label="{{ phrase('drag_handle')|for_attr }}"><xf:fa icon="fa-bars" /></div>
+										<div class="nestable-content">{$preset.title}</div>
+									</li>
+								</xf:foreach>
+							</xf:contentcheck>
+						</ol>
+					</xf:if>
+					<xf:hiddenval name="presets[]" value="" class="js-presetData" />
+				</div>
+			</div>
+		</xf:foreach>
+		<xf:submitrow icon="save" rowtype="simple" />
+	</div>
+</xf:form>

@@ -1,0 +1,137 @@
+{
+    "admin/th_covers_preset_category_edit.html": {
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "19e5e6f6864bf79bfb4ea60aa771d622"
+    },
+    "admin/thcovers_cover_bulk_delete.html": {
+        "version_id": 1000131,
+        "version_string": "1.0.1 Beta 1",
+        "hash": "74751fc6c0d340f0d6acfd26ed6c3ee7"
+    },
+    "admin/thcovers_cover_delete.html": {
+        "version_id": 1000191,
+        "version_string": "1.0.1 Patch Level 1",
+        "hash": "fabd0444c4ddb0db682eac943e769f10"
+    },
+    "admin/thcovers_cover_image.html": {
+        "version_id": 1000191,
+        "version_string": "1.0.1 Patch Level 1",
+        "hash": "d4a6299876d7a18ec66ddd4bbe3be28b"
+    },
+    "admin/thcovers_cover_preset.html": {
+        "version_id": 1000191,
+        "version_string": "1.0.1 Patch Level 1",
+        "hash": "f4350a96802f3edb4cb710e41c11ed5a"
+    },
+    "admin/thcovers_cover_preset_category_delete.html": {
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "1257955c04677d033c839a7a1c27b5c8"
+    },
+    "admin/thcovers_cover_preset_delete.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "9684ce6c2371375943f66640d7fb89ec"
+    },
+    "admin/thcovers_cover_preset_edit.html": {
+        "version_id": 1010131,
+        "version_string": "1.1.1 Beta 1",
+        "hash": "92f731e59c508017f9e999aa5453bcc6"
+    },
+    "admin/thcovers_cover_preset_list.html": {
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "30a31929d3c81e2ba39704e44a719f30"
+    },
+    "admin/thcovers_cover_preset_sort.html": {
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "227aedeb1208616e62439f1a98dd75fc"
+    },
+    "admin/thcovers_cover_style.html": {
+        "version_id": 1000191,
+        "version_string": "1.0.1 Patch Level 1",
+        "hash": "3dc94f73db2bb5b3861ce586a0b1c5d5"
+    },
+    "admin/thcovers_cover_view.html": {
+        "version_id": 10101070,
+        "version_string": "1.1.1",
+        "hash": "40b0ca10a660017e0446327280843868"
+    },
+    "admin/thcovers_import_config.html": {
+        "version_id": 1000015,
+        "version_string": "1.0.0 Alpha 5",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "admin/thcovers_import_step_config.html": {
+        "version_id": 1000015,
+        "version_string": "1.0.0 Alpha 5",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "admin/thcovers_list.html": {
+        "version_id": 1000131,
+        "version_string": "1.0.1 Beta 1",
+        "hash": "030427e9f16441bf7339029b5299855c"
+    },
+    "admin/thcovers_list.less": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "d7b63b56089f7b0b29e14b5077a93a43"
+    },
+    "admin/thcovers_option_template_colors.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "9d193cde9635dee8eb8c5cf9756a42bb"
+    },
+    "public/approval_item_cover.html": {
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "318cdc4ebdc5e6df280d58289e0a3851"
+    },
+    "public/th_covers.less": {
+        "version_id": 1010131,
+        "version_string": "1.1.1 Beta 1",
+        "hash": "0ed86ac433bc2cbb614912a9582c728c"
+    },
+    "public/th_covers_approve.html": {
+        "version_id": 1000231,
+        "version_string": "1.0.2 Beta 1",
+        "hash": "22fcc65f0ec3dec986e78f9dfe1c34ec"
+    },
+    "public/th_covers_openGraph_macros.html": {
+        "version_id": 1000370,
+        "version_string": "1.0.3",
+        "hash": "ac29b305501ebc919892f8d3e50a0a00"
+    },
+    "public/thcovers_cover_delete.html": {
+        "version_id": 1000131,
+        "version_string": "1.0.1 Beta 1",
+        "hash": "bcea83248a02956443aecce9648ab692"
+    },
+    "public/thcovers_cover_image.html": {
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "ee6152b46c0aef601cbc4df3bf0a2cb8"
+    },
+    "public/thcovers_cover_macros.html": {
+        "version_id": 10101070,
+        "version_string": "1.1.1",
+        "hash": "03b666befa1a14ab57f39d4a24e6e059"
+    },
+    "public/thcovers_cover_preset.html": {
+        "version_id": 1010131,
+        "version_string": "1.1.1 Beta 1",
+        "hash": "f85336715dad6c1d04c75ad7d884808d"
+    },
+    "public/thcovers_cover_style.html": {
+        "version_id": 1010092,
+        "version_string": "1.1.0 Patch Level 2",
+        "hash": "9300d33e1ea9f390fe8314de10d992ab"
+    },
+    "public/thcovers_positionMessage.html": {
+        "version_id": 901010193,
+        "version_string": "1.1.1 Patch Level 3",
+        "hash": "dd355b482001e2e17750b6b8e9458d3d"
+    }
+}

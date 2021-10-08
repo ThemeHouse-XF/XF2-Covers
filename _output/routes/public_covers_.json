@@ -1,0 +1,11 @@
+{
+    "route_type": "public",
+    "route_prefix": "covers",
+    "sub_name": "",
+    "format": ":str<content_type>/:int<content_id>/",
+    "build_class": "",
+    "build_method": "",
+    "controller": "ThemeHouse\\Covers:Cover",
+    "context": "",
+    "action_prefix": ""
+}

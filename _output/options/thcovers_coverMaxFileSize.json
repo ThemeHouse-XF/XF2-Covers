@@ -1,0 +1,12 @@
+{
+    "edit_format": "callback",
+    "edit_format_params": "XF\\Option\\MaxFilesize::renderOption",
+    "data_type": "unsigned_integer",
+    "sub_options": [],
+    "validation_class": "XF\\Option\\MaxFilesize",
+    "validation_method": "verifyOption",
+    "default_value": "8192",
+    "relations": {
+        "thCovers": 2000
+    }
+}

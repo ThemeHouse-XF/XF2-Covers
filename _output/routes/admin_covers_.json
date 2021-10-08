@@ -1,0 +1,11 @@
+{
+    "route_type": "admin",
+    "route_prefix": "covers",
+    "sub_name": "",
+    "format": ":int<cover_id>/",
+    "build_class": "",
+    "build_method": "",
+    "controller": "ThemeHouse\\Covers:Cover",
+    "context": "coverlist",
+    "action_prefix": ""
+}

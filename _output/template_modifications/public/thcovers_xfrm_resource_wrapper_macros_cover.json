@@ -1,0 +1,9 @@
+{
+    "template": "xfrm_resource_wrapper_macros",
+    "description": "Adds the cover to the resource.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/(<xf:macro name=\"header\".*>)/Us",
+    "replace": "${0}\n<xf:page option=\"thCover\" value=\"{$resource}\" />\n<xf:macro name=\"og_image\"\n\t\t  template=\"th_covers_openGraph_macros\"\n\t\t  arg-cover=\"{$resource.ThCover}\" />"
+}
